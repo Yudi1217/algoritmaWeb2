@@ -42,8 +42,8 @@
 	-------------------------------------------------------------------------------- <br>
 	<?php  
 		if ($_POST) {
-			echo "Nama 		: ". $_POST ['nama']; echo "<br>";
-			echo "Nim 		: ". $_POST ['nim']; echo "<br>";
+			echo "Nama 	: ". $_POST ['nama']; echo "<br>";
+			echo "Nim 	: ". $_POST ['nim']; echo "<br>";
 			echo "Jurusan 	: ". $_POST ['jurusan']; echo "<br>";
 			echo "Kampus	: ". $_POST ['kampus']; echo "<br>";
 			echo "Email 	: ". $_POST ['email']; echo "<br>";
