@@ -42,8 +42,8 @@
 	-------------------------------------------------------------------------------- <br>
 	<?php  
 		if ($_GET) {
-			echo "Nama 		: ". $_GET['nama']; echo "<br>";
-			echo "Nim 		: ". $_GET['nim']; echo "<br>";
+			echo "Nama 	: ". $_GET['nama']; echo "<br>";
+			echo "Nim 	: ". $_GET['nim']; echo "<br>";
 			echo "Jurusan 	: ". $_GET['jurusan']; echo "<br>";
 			echo "Kampus	: ". $_GET['kampus']; echo "<br>";
 			echo "Email 	: ". $_GET['email']; echo "<br>";
