@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Utama</title>
+</head>
+<body>
+	<hr />
+	<h1>UAS UTAMA PEMROGRAMAN WEB BERBASIS 2</h1>
+	<h4>PROGRAM PENJUALAN</h4>
+	<h1>INPUT</h1>
+	<hr />
+
+		<table border="1">
+			<tr>
+				<td>Kode Penjualan :</td>
+				<td><input type="text" id="kope"></td>
+			</tr>
+			<tr>
+				<td>Kode Barang :</td>
+				<td>
+					<select type="button" id="kobar" onclick="tampilkan()">
+						<option value="A001">A001</option>
+						<option value="A002">A002</option>
+						<option value="A003">A003</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Nama Barang :</td>
+				<td><span id="nama"></span></td>
+			</tr>
+			<tr>
+				<td>Harga Satuan :</td>
+				<td><input type="text" id="hrg"></td>
+			</tr>
+			<tr>
+				<td>Jumlah Barang :</td>
+				<td><input type="text" id="jml"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button onclick="hitung()">Hitung Total</button></td>
+			</tr>
+			<tr>
+				<td>Total :</td>
+				<td><span id="total" /></td>
+			</tr>
+			<tr>
+				<td>Bayar :</td>
+				<td><input type="text" id="byr"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button onclick="hitungbayar()">Hitung Bayar</button></td>
+			</tr>
+			<tr>
+				<td>Kembalian :</td>
+				<td><span id="kembali" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button onclick="simpan()">simpan</button>
+					<button onclick="ulang()">ulang</button>
+				</td>
+			</tr>
+		</table>
+
+
+	<script type="text/javascript">
+
+		function tampilkan() {
+			var kd_barang = document.getElementById('kobar').value;
+			if (kd_barang == "A001") {
+				document.getElementById('nama').innerHTML="SUSU";
+			} else
+			if (kd_barang == "A002") {
+				document.getElementById('nama').innerHTML="SIRUP";
+			} else
+			if (kd_barang == "A003") {
+				document.getElementById('nama').innerHTML="AIR MINERAL";
+			}
+		}
+
+		function hitung() {
+			var harga = parseInt(document.getElementById('hrg').value);
+			var jumlah = parseInt(document.getElementById('jml').value);
+			var total = harga * jumlah;
+			document.getElementById('total').innerHTML = total;
+		}
+
+		function hitungbayar() {
+			var bayar = parseInt(document.getElementById('byr').value);
+			var hasil = parseInt(document.getElementById('total').value);
+			var kembali = bayar - hasil;
+			document.getElementById('kembali').innerHTML = kembali;
+		}
+	</script>
+
+	<hr />
+	<h1>OUTPUT</h1>
+	<hr />
+
+	<table border="1" name="output">
+			<tr>
+				<td>Kode Penjualan :</td>
+				<td><span id="kope"></span></td>
+			</tr>
+			<tr>
+				<td>Kode Barang :</td>
+				<td><span id="kobar"></span></td>
+			</tr>
+			<tr>
+				<td>Nama Barang :</td>
+				<td><span id="nama"></span></td>
+			</tr>
+			<tr>
+				<td>Harga Satuan :</td>
+				<td><span id="hrg"></span></td>
+			</tr>
+			<tr>
+				<td>Jumlah Barang :</td>
+				<td><span id="jml"></span></td>
+			</tr>
+			<tr>
+				<td>Total :</td>
+				<td><span id="total" /></td>
+			</tr>
+			<tr>
+				<td>Bayar :</td>
+				<td><span id="byr"></span></td>
+			</tr>
+			<tr>
+				<td>Kembalian :</td>
+				<td><span id="kembali" /></td>
+			</tr>
+		</table>
+
+</body>
+</html>
